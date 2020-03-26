@@ -1,0 +1,9 @@
+<h1>My Diary</h1>
+<hr>
+<ul>
+  <div *ngFor='let diary of diary;let i = index'>
+    <li>{{diary.title}} on {{diary.entryDate|date|uppercase}}</li>
+    <button (click)='toggleEntry(i)'>Toggle Entry</button>
+    <app-diary-entry *ngIf='diary.showEntry' [diary]='diary' (isComplete)='deleteEntry($event,i)'></app-diary-entry>
+  </div>
+</ul>
