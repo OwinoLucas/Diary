@@ -12,7 +12,11 @@ export class DiaryComponent implements OnInit {
 
   deleteEntry(isComplete, index) {
     if (isComplete) {
-      let toDelete
+      let toDelete = confirm('Are you sure you want to delete ${this.entry[index].title}?')
+
+      if (toDelete) {
+        this.diary.splice(index, 1)
+      }
     }
   }
 
