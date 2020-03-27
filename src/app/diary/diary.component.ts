@@ -20,6 +20,13 @@ export class DiaryComponent implements OnInit {
     }
   }
 
+  addNewEntry(dairy) {
+    let dairyLength = this.diary.length;
+    dairy.id = dairyLength + 1;
+    dairy.entryDate = new Date(dairy.entryDate);
+    this.diary.push(dairy)
+  }
+
   toggleEntry(index) {
     this.diary[index].showEntry = !this.diary[index].showEntry;
   }
