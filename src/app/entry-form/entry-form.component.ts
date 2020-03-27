@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Diary } from '../diary'
 
 @Component({
   selector: 'app-entry-form',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntryFormComponent implements OnInit {
 
+  newEntry = new Diary(0, "", "", new Date());
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
