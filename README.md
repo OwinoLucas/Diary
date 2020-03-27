@@ -17,7 +17,7 @@ A diary application where you can write down your thoughts.
 * Have form component with the necessary Inputs.
 * Your app should be deployed.
 ## Link to live site
-[](link)
+[https://owinolucas.github.io/diary/](link)
 ## License
 Copyright (c) [2020] [Lucas Otieno]
 
