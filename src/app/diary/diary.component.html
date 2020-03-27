@@ -8,12 +8,15 @@
       <div class="col-md-6">
         <ul>
           <div *ngFor='let diary of diary;let i = index'>
-            <li>{{diary.title}} on {{diary.entryDate|date|uppercase}}</li>
-            <button (click)='toggleEntry(i)' class="btn btn-primary">Toggle Entry</button>
+            <li>{{diary.title}} on {{diary.entryDate|date|uppercase}}</li><br>
+            <button (click)='toggleEntry(i)' class="btn btn-success">Toggle Entry</button>
             <app-diary-entry *ngIf='diary.showEntry' [diary]='diary' (isComplete)='deleteEntry($event,i)'>
             </app-diary-entry>
           </div>
         </ul>
+      </div>
+      <div class="col-md-6">
+        <app-entry-form></app-entry-form>
       </div>
     </div>
   </div>

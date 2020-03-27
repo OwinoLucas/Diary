@@ -1,0 +1,9 @@
+.card {
+  background-image: url("../../assets/img.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-weight: bolder;
+  opacity: 0.84;
+}
